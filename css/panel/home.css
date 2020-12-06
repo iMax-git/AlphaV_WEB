@@ -1,0 +1,54 @@
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                    Section "home"                         */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                                           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+#home{
+    position: relative;
+    margin-left: 192px;
+    min-height: 92%;
+    background-color: whitesmoke;
+    width: 1728px;
+    font-family: caviar_dreams_bold;
+}
+
+
+#home h1{
+    padding: 5%;
+    font-family: caviar_dreams_bold;
+}
+
+#home .title{
+    padding: 74px;
+    font-family: caviar_dreams_bold;
+}
+
+#home .playerserverinfo{
+    display: block;
+    position: relative;
+    float: left;
+    margin-left: 10%;
+}
+
+#home .playerserverinfo li{
+    margin: 30px;    
+    font-family: caviar_dreams_ita;
+}
+
+#home .actualite{
+    display: inline-block;
+    margin-left: 40%;
+    width: 400px;
+    height: 500px;
+    border: 5px solid;
+    border-radius: 0.5rem;
+}
+
+
+/* @media screen and (max-width: 1445px){
+    #home .actualite{
+        margin-left: 100px;
+    }    
+} */

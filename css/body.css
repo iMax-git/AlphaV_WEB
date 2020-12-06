@@ -1,0 +1,237 @@
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                        Basic Needs                        */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+@font-face{
+    font-family: gta;
+    src: url(../assets/font/pricedown/pricedown_bl.ttf);
+}
+
+@font-face{
+    font-family: bebas;
+    src: url(../assets/font/bebas/Bebas-Regular.otf);
+    src: url(../assets/font/bebas/Bebas-Regular.ttf);
+}
+
+@font-face{
+    font-family: caviar_dreams_ita;
+    src: url(../assets/font/caviar_dreams/CaviarDreams_Italic.ttf);
+}
+
+@font-face{
+    font-family: caviar_dreams_bold;
+    src: url(../assets/font/caviar_dreams/CaviarDreams_Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+div{
+    display: block;
+    padding: 15px;
+}
+
+.inner-width{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    text-align: center;
+    flex-flow: wrap;
+}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                    Section "Main"                         */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                           #Main                           */
+/*                           |_.inner-width                  */
+/*                           | |_.content                    */
+/*                           |   |_div (img,h1)              */
+/*                           |   |_div (h3)                  */
+/*                           |   |_div (a[button])           */
+/*                           |____________________           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+#Main{
+    background: url("../assets/bg1.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: local;
+    height: 50vh;
+    min-height: 500px;
+    font-family: bebas;
+    color: white;
+    -webkit-text-stroke: 0.00px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    font-size: 40px;
+    /* clip-path: polygon(100% 0, 100% 100%, 60% 75%, 40% 75%, 0 100%, 0 0); */
+}
+
+#Main .discordlink{
+    -webkit-text-stroke: 0px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    padding-bottom: 10px;
+    align-self: center;
+    padding: 5px 10vh;
+    transition: 900ms;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0.5vh;
+    color: white;
+    float: none;
+    border-radius: 1.5rem;
+    border-style: solid;
+    background-color: #637edf;
+    border-color: #637edf;
+    
+}
+
+#Main h1{
+    font-size: 90px;
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+#Main a{
+    padding: 5px 1vh;
+    transition: 900ms;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    float: right;
+    margin: 0.5vh;
+    color: white;
+}
+
+
+.inner-width-copie{
+    margin: 0px 20% 0;
+}
+
+#Main .joinserver{
+    border-radius: 1.5rem;
+    border-style: solid;
+    background-color: #36c059;
+    border-color: #36c059;
+}
+
+#Main .connectgui{
+    border-radius: 1.5rem;
+    border-style: solid;
+    background-color: #e9be49;
+    border-color: #e9be49;
+}
+
+#Main .button{
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 660px){
+    #Main a{float: left;}
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                    Section "Second"                       */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                                           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+.Information{
+    margin-top: 30px;
+}
+
+.Information h1{
+    text-align: center;
+    font-family: caviar_dreams_bold;
+    font-size: 30px;
+}
+
+.Information .box{
+    display: flex;
+    text-align: center;
+    place-content: center;
+    font-family: caviar_dreams_ita;
+}
+
+.Information .P{
+    padding: 50px 5vh;
+    width: 25%;
+    margin: 5vh;
+}
+
+.Information i{
+    font-size: 10vh;
+    padding: 10px;
+}
+
+.Information h3{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 950px){
+    .Information .box{
+        text-align: -webkit-center;
+        display: block;
+    }
+
+    .Information .P{
+        border-radius: 1.5rem;
+        border-style: solid;
+        padding: 50px 5vh;
+        width: 40%;
+        margin: 5vh 0px 5vh 0;
+    }
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                         Footer                            */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                           Footer                          */
+/*                           |_.copyright("text")            */
+/*                           |_.rs(a)                        */
+/*                           |____________________           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+footer{
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+footer a{
+    color: black;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: .2s linear;
+}
+
+footer .leftside{
+    float: left;
+    padding: 0;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .rightside{
+    text-align: center;
+    float: right;
+}
+
+.end-struct{
+    margin: 0px 20% 0;
+}
+
+.copyright {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    font-family: caviar_dreams_ita;
+    -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: currentcolor;
+    -webkit-text-stroke-color: rgb(0,0,0);
+}
