@@ -98,6 +98,11 @@ jQuery(function($) {
     $(this).parent().addClass('is-focused has-label');
   });
 
+  $('.field-input-search').focus(function(){
+    $(this).parent().addClass('is-focused has-label');
+  });
+
+
   // à la perte du focus
   $('.field-input').blur(function(){
     $parent = $(this).parent();
@@ -107,8 +112,22 @@ jQuery(function($) {
     $parent.removeClass('is-focused');
   });
 
+  $('.field-input-search').blur(function(){
+    $parent = $(this).parent();
+    if($(this).val() == ''){
+      $parent.removeClass('has-label');
+    }
+    $parent.removeClass('is-focused');
+  });
+
   // si un champs est rempli on rajoute directement la class has-label
   $('.field-input').each(function(){
+    if($(this).val() != ''){
+      $(this).parent().addClass('has-label');
+    }
+  });
+
+  $('.field-input-search').each(function(){
     if($(this).val() != ''){
       $(this).parent().addClass('has-label');
     }
@@ -145,5 +164,31 @@ $(function() {
       });
       showMenuMDTPolice("Rapport");
       return false;
+  });
+});
+
+/*
+$(function() {
+  $("#searchreport").bind('submit',function() {
+    var value = $('#search2').val();
+     $.post('../includes/include.mdt.form.search.php',{value:value}, function(data){
+       $("#rapportlist").html(data);
+     });
+     return false;
+  });
+});
+*/
+
+$(document).ready(function(){
+  $("#search2").keyup(function(){
+    $.ajax({
+      url: '../includes/include.mdt.form.search.php',
+      type: 'post',
+      data: {search: $(this).val()},
+      success:function(result) {
+        $("#rapportlisting").html(result);
+        
+      }
+    });
   });
 });

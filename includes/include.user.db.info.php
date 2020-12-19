@@ -3,7 +3,7 @@
     include ('include.user.steam.info.php');
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Connection failed MAIN: " . $conn->connect_error);
     }
 
     $sql2 = "SELECT * FROM `users` INNER JOIN `job_grades` ON users.job = job_grades.job_name AND users.job_grade = job_grades.grade WHERE identifier ='steam:".dechex($steamprofile['steamid'])."'";
@@ -36,5 +36,18 @@
     $_SESSION["prenom"] = $rpuserinfo['prenom'];
     $_SESSION["nom"] = $rpuserinfo["nom"];
  
+    
+
+    
     $conn->close();
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed MAIN: " . $conn->connect_error);
+    }
+
+    $sql3 = 'SELECT * FROM `report` ORDER BY id DESC LIMIT 5';
+    $sql3_result = $conn->query($sql3);
+
+    
 ?>

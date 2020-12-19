@@ -1,0 +1,420 @@
+body{
+    background-color: #1b2838;
+
+}
+
+
+.name{
+    margin: 3vh 10vh 2vh;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttonlist{
+    display: block;
+    list-style: none;
+    background-color: #ffc825;
+    padding: 10px;
+    text-align: center;
+}
+
+.buttonlist a{
+    color: black;
+    list-style: none;
+    display: inline;
+    padding: 5px 10px 5px;
+} 
+
+.buttonlist a:hover{
+    border-bottom: solid black;
+} 
+
+
+.buttonlist .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .buttonlist a:not(:first-child) {display: none;}
+    .buttonlist a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .buttonlist.responsive {position: relative;}
+    .buttonlist.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .buttonlist.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+  }
+
+
+
+
+
+.fnc-center{
+    margin: 5vh auto;
+    max-width: 100vh;
+}
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                    division "main"                        */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                                           */
+/*                                                           */ 
+/*                                                           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+.main{
+    margin: 3vh;
+    padding: 5vh 0 0; 
+}
+
+.main li{
+    padding: 10px;
+    color: black;
+    list-style: none;
+} 
+
+
+.main li h4{
+    padding: 10px;
+    color: black;
+    list-style: none;
+    background-color: #ffc825;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+} 
+
+.main li p{
+    color: white;
+    text-align: none;
+} 
+
+
+
+.main form{
+    padding-bottom: 30px;
+}
+
+.main h3{
+    padding-bottom: 40px;
+    color: #ffc825;
+    text-align: center;
+}
+
+/*  */
+
+.main .field{
+    position: relative;
+    height: 72px;
+    padding: 16px 0 8px 0;
+}
+
+.main .field-label{
+    position: relative;
+    margin: 0;
+    display: block;
+    color:  #bfbfbf;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    transform: translateY(24px);
+    transition: transform 0.3s, color 0.3s;
+    transform-origin: 0 50%;
+    margin-left: 10px;
+}
+
+
+.main .field-input{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid solid none;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+.main .field-1::after, .field-1::before{
+    content:'';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+.main .field::after{
+    background-color: #ffc825; /* $color*/
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.main .has-label .field-label{
+    transform: translateY(0) scale(0.75);
+}
+
+.main .is-focused .field-label{
+    color: #FFF; /* $color*/
+}
+
+.main .field.is-focused::after{
+    transform: scaleX(1);
+}
+
+ /*  */ 
+
+
+
+ 
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                    division "rapport"                     */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                                           */
+/*                                                           */
+/*                                                           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+.rapport{
+    display: none;
+    margin: 3vh;
+    padding: 5vh 0 0; 
+}
+
+.rapport .selectreportpd h2{
+    margin: 60px;
+    color: black;
+    list-style: none;
+    background-color: #ffc825;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+.rapport .createreportpd{
+    display: none;
+}
+
+.rapport .createreportpd form{
+    width: 100%;
+}
+
+/*  */
+
+.rapport .field{
+    position: relative;
+    height: 72px;
+    padding: 16px 0 8px 0;
+ }
+
+.rapport .field-label{
+    position: relative;
+    margin: 0;
+    color:  #bfbfbf;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    transform: translateY(24px);
+    transition: transform 0.3s, color 0.3s;
+    transform-origin: 0 50%;
+    margin-left: 10px;
+    display: block;
+}
+
+.rapport .field-input{
+    position: relative;
+    display: block;
+    width: 40%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid solid none;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+ 
+.rapport .field-input-large{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+
+.rapport .field::after, .field::before{
+    content:'';
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+
+.rapport .fieldlarge::after, .fieldlarge::before{
+    content:'';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+
+
+.rapport .field::after{
+    background-color: #ffc825; /* $color*/
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.rapport .has-label .field-label{
+    transform: translateY(0) scale(0.75);
+}
+
+.rapport .is-focused .field-label{
+    color: #FFF; /* $color*/
+}
+
+.rapport .field.is-focused::after{
+    transform: scaleX(1);
+}
+
+.rapport .field-label-large {
+
+    color: #bfbfbf;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+textarea.TArapport{
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid;
+    color: white;
+    border-color: #ffc825;
+    height: 200px;
+    resize: none;
+    width: 100%;
+}
+
+.rapport .createreportpd .submitbutton{
+    background-color: #ffc825;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+}
+
+
+
+.rapport .field-input-search{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid solid none;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+.rapport .fieldsearch::after, .fieldsearch::before{
+    content:'';
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+.rapport .searchreportpd .submitbutton{
+    position: unset;
+    background-color: #ffc825;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+ /*  */ 
+
+
+.rapport .searchreportpd{
+    display: none;
+}
+
+.rapport .searchreportpd .rapportcontent{
+    display: none;
+    margin-top: 20px;
+}
+
+.rapport .searchreportpd .rapportlist li{
+    margin-top: 20px;
+    list-style: none;
+}
+
+.rapport .searchreportpd .rapportlist li h4 {
+    padding: 10px;
+    color: black;
+    list-style: none;
+    background-color: #ffc825;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.rapport .searchreportpd .rapportlist li p {
+    color:white;
+}
