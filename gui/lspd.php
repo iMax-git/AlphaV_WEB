@@ -1,5 +1,6 @@
 <?php
     require ('../includes/include.steamAuth.php');
+
 ?>
 <html>
     <head>
@@ -101,7 +102,7 @@
                     </div>
                 <div class="searchreportpd">
                     <form id="searchreport" method="POST">
-                        <div class="field fieldsearch">
+                        <div id="rapportfield" class="field fieldsearch">
                             <label for="search" class="field-label">Nom ou ID de rapport</label>
                             <input type="text" id="search2" name="search" class="field-input-search">
                         </div>
@@ -112,24 +113,9 @@
                             </ul>
                         </div>
                         <div class="rapportcontent">
-                            <p>
-                                <span style="padding-bottom: 40px;
-                                color: #ffc825;
-                                text-align: center;">Nom du civil:</span> <br>
-                                <br>
-                                <span style="padding-bottom: 40px;
-                                color: #ffc825;
-                                text-align: center;">Nom du Rapport:</span> <br>
-                                <br>
-                                <span style="padding-bottom: 40px;
-                                color: #ffc825;
-                                text-align: center;">Date:</span> <br>
-                                <br>
-                                <span style="padding-bottom: 40px;
-                                color: #ffc825;
-                                text-align: center;">Rapport:</span> <br>
-                                <br>
-                            </p>
+                            <?php
+                                include ("../includes/include.mdt.form.search.php");
+                            ?>
                         </div>
                     </form>
                 </div>

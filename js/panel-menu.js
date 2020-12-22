@@ -56,6 +56,8 @@ function showMenuMDTPolice(name) {
   $(".rapport").hide();
   $('.createreportpd').hide();
   $('.searchreportpd').hide();
+  $('.rapportcontent').hide();
+  $(".selectreportpd").hide();
   // $(".JScriminals").hide();
   // $(".JSinformation").hide();
   // $(".JSmemo").hide();
@@ -66,16 +68,23 @@ function showMenuMDTPolice(name) {
     $(".rapport").show();
     $(".selectreportpd").show();
   }
+  if (name == "RapportContent"){
+    $(".rapport").show();
+    $(".searchreportpd").show()
+    $(".rapportcontent").show();
+    $(".rapportlist").hide();
+    $("#rapportfield").hide();
+  }
   // submenu
   if(name == "createrapport"){
     $(".rapport").show();
-    $(".selectreportpd").hide();
     $('.createreportpd').show();
   }
   if(name == "searchrapport"){
     $(".rapport").show();
-    $(".selectreportpd").hide();
     $('.searchreportpd').show();
+    $(".rapportlist").show();
+    $("#rapportfield").show();
   }
  
   //
@@ -192,3 +201,15 @@ $(document).ready(function(){
     });
   });
 });
+
+function getReport(id) {
+  showMenuMDTPolice("RapportContent");
+  $.ajax({
+    url: '../includes/include.mdt.form.search.php',
+    type: 'post',
+    data: {requestid: id},
+    success:function(requestedid) {
+       $(".rapportcontent").html(requestedid);
+    }
+  });
+}
