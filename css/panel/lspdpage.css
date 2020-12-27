@@ -418,3 +418,239 @@ textarea.TArapport{
 .rapport .searchreportpd .rapportlist li p {
     color:white;
 }
+
+
+ 
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                    division "criminal"                     */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*                                                           */
+/*                                                           */
+/*                                                           */
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+
+.criminal{
+    display: none;
+    margin: 3vh;
+    padding: 5vh 0 0; 
+}
+
+.criminal .selectcriminalpd h2{
+    margin: 60px;
+    color: black;
+    list-style: none;
+    background-color: #ffc825;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+.criminal .createcriminalpd{
+    display: none;
+}
+
+.criminal .createcriminalpd form{
+    width: 100%;
+}
+
+
+.criminal .field{
+    position: relative;
+    height: 72px;
+    padding: 16px 0 8px 0;
+ }
+
+.criminal .field-label{
+    position: relative;
+    margin: 0;
+    color:  #bfbfbf;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    transform: translateY(24px);
+    transition: transform 0.3s, color 0.3s;
+    transform-origin: 0 50%;
+    margin-left: 10px;
+    display: block;
+}
+
+.criminal .field-input{
+    position: relative;
+    display: block;
+    width: 40%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid solid none;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+ 
+.criminal .field-input-large{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+
+.criminal .field::after, .field::before{
+    content:'';
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+
+.criminal .fieldlarge::after, .fieldlarge::before{
+    content:'';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+
+
+.criminal .field::after{
+    background-color: #ffc825; /* $color*/
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.criminal .has-label .field-label{
+    transform: translateY(0) scale(0.75);
+}
+
+.criminal .is-focused .field-label{
+    color: #FFF; /* $color*/
+}
+
+.criminal .field.is-focused::after{
+    transform: scaleX(1);
+}
+
+.criminal .field-label-large {
+
+    color: #bfbfbf;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+textarea.TArapport{
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid;
+    color: white;
+    border-color: #ffc825;
+    height: 200px;
+    resize: none;
+    width: 100%;
+}
+
+.criminal .createcriminalpd .submitbutton{
+    background-color: #ffc825;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+}
+
+
+
+.criminal .field-input-search{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 32px;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    background: transparent;
+    border-style: solid solid none;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    border-color: #ffc825;
+    padding-left: 10px;
+}
+
+.criminal .fieldsearch::after, .fieldsearch::before{
+    content:'';
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    background-color: #e6e6e6;
+}
+
+.criminal .searchcriminalpd .submitbutton{
+    position: unset;
+    background-color: #ffc825;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+ /*  */ 
+
+
+.criminal .searchcriminalpd{
+    display: none;
+}
+
+.criminal .searchcriminalpd .criminalcontent{
+    display: none;
+    margin-top: 20px;
+}
+
+.criminal .searchcriminalpd .criminallist li{
+    margin-top: 20px;
+    list-style: none;
+}
+
+.criminal .searchcriminalpd .criminallist li h4 {
+    padding: 10px;
+    color: black;
+    list-style: none;
+    background-color: #ffc825;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.rapport .searchcriminalpd .criminallist li p {
+    color:white;
+}
+
+
+ 

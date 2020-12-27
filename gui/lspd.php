@@ -121,6 +121,58 @@
                 </div>
             </div> 
         </div>
+
+        <div class="criminal">
+                <div class="fnc-center">
+                    <div class="selectcriminalpd">
+                        <h2 class="JScreatecriminalPD">Crée une fiche criminel.</h2>
+                        <h2 class="JSfindcriminalPD">Trouver un criminel.</h2>
+                    </div>
+                    <div class="createcriminalpd">
+                        <form class="JScreatecriminalpd">
+                            <div class="field small">
+                                <label for="search" class="field-label">Nom du civil</label>
+                                <input type="text" id="JSFIELDCIVNAME" name="civname" class="field-input">
+                            </div>
+                            <div class="field small">
+                                <label for="search" class="field-label">Nom du rapport</label>
+                                <input type="text" id="JSFIELDREPORTNAME" name="reportname" class="field-input">
+                            </div>
+                            <div class="fieldlargerapport">
+                                <h4 class="field-label-large">Rapport</h4>
+                                <textarea id="JSFIELDREPORTCONTENT" class="TArapport" name = "reportcontent"
+                                rows="5" cols="33" ></textarea>
+                            </div>
+                            <input type="submit" id="submit" name="Valider" class="submitbutton" onclick="messageresult()">
+                            <pre id="result" style="background-color: green;
+                                                    text-align: center;
+                                                    padding: 10px;
+                                                    top: -30px;
+                                                    position: absolute;
+                                                    display: none;">New record created successfully</pre>
+                        </form>
+                    </div>
+                <div class="searchcriminalpd">
+                    <form id="searchreport" method="POST">
+                        <div id="rapportfield" class="field fieldsearch">
+                            <label for="search" class="field-label">Nom ou ID de rapport</label>
+                            <input type="text" id="search2" name="search" class="field-input-search">
+                        </div>
+                        
+                        <div class="rapportlist">
+                            <ul id="rapportlisting">
+                                
+                            </ul>
+                        </div>
+                        <div class="criminalcontent">
+                            <?php
+                                include ("../includes/include.mdt.form.search.php");
+                            ?>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
         <?php
             }
         ?>

@@ -36,6 +36,7 @@ if (isset($_POST['requestid'])) {
   $sql_result = $conn->query($sql);
   $sql_result = $sql_result -> fetch_assoc();
 
+  $report["id"] = $sql_result["id"];
   $report["civname"] = $sql_result["civname"];
   $report["title"] = $sql_result["title"];
   $report["date"] = $sql_result["date"];
@@ -43,6 +44,8 @@ if (isset($_POST['requestid'])) {
 
 
   echo "<p>";
+  echo '<span style="padding-bottom: 40px; color: #ffc825; text-align: center;">ID du rapport: <span style="color: white;">'.$report["id"].'</span></span> <br>';
+  echo "<br>";
   echo '<span style="padding-bottom: 40px; color: #ffc825; text-align: center;">Nom du civil: <span style="color: white;">'.$report["civname"].'</span></span> <br>';
   echo "<br>";
   echo '<span style="padding-bottom: 40px; color: #ffc825;text-align: center;">Nom du Rapport: <span style="color: white;">'.$report["title"].'</span></span> <br>';

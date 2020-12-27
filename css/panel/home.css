@@ -8,9 +8,8 @@
 #home{
     position: relative;
     margin-left: 192px;
-    min-height: 92%;
+    min-height: 90%;
     background-color: whitesmoke;
-    width: 1728px;
     font-family: caviar_dreams_bold;
 }
 
@@ -46,9 +45,35 @@
     border-radius: 0.5rem;
 }
 
+@media screen and (max-width:650px){
+    #home{
+        margin-left: 0px;
+    }
+}
 
-/* @media screen and (max-width: 1445px){
-    #home .actualite{
-        margin-left: 100px;
-    }    
-} */
+
+ 
+@media screen and (max-width: 650px) {
+    #categorie a:not(:first-child) {display: none;}
+    #categorie a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    #categorie.responsive {
+      position: absolute; 
+      z-index: 1;
+    }
+    #categorie.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    #categorie.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+  }

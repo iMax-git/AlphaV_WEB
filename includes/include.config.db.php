@@ -1,8 +1,8 @@
 <?php
 
-$servername = ""; //IP ou localhost/"127.0.0.1"
-$username = ""; //username (default = "root")
+$servername = "127.0.0.1"; //IP ou localhost/"127.0.0.1"
+$username = "root"; //username (default = "root")
 $password = ""; 
-$dbname = ""; // nom de la db cible
+$dbname = "betalife"; // nom de la db cible
 
 ?>

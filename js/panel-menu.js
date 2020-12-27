@@ -5,14 +5,7 @@ $(document).ready(function(){
     else
       $("#categorie").show();
   });
-  // MAIN BUTTON 
-  $('.JSLSPD').click(function(){
-    showMenuMain("lspd")
-  });
-  $('.JSaccueil').click(function(){
-    showMenuMain("home")
-  });
-
+  
   // POLICE MDT BUTTON
   $('.JShome').click(function(){
     showMenuMDTPolice("Home");
@@ -58,7 +51,7 @@ function showMenuMDTPolice(name) {
   $('.searchreportpd').hide();
   $('.rapportcontent').hide();
   $(".selectreportpd").hide();
-  // $(".JScriminals").hide();
+  $(".criminal").hide();
   // $(".JSinformation").hide();
   // $(".JSmemo").hide();
   if (name == "Home") {
@@ -89,7 +82,7 @@ function showMenuMDTPolice(name) {
  
   //
   if (name == "Criminel") {
-    $(".JScriminals").show();
+    $(".criminal").show();
   }
   if (name == "Information") {
     $(".JSinformation").show();
